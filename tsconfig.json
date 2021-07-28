@@ -3,10 +3,10 @@
     "target": "es6",
     "module": "commonjs",
     "outDir": "dist",
-    "sourceMap": true,
     "rootDir": "./",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "inlineSourceMap": true
   },
   "files": [
     "./node_modules/@types/node/index.d.ts"
