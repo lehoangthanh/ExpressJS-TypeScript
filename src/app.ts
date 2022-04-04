@@ -6,8 +6,8 @@ import * as expressWinston from 'express-winston';
 import cors = require('cors');
 import debug = require('debug');
 
-import { CommonRoutesConfig } from './routers/common/common.routes.config';
-import { UsersRoutesConfig } from './routers/users/users.routes.config';
+import { CommonRoutesConfig } from './common/common.routes.config';
+import { UsersRoutesConfig } from './users/users.routes.config';
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
