@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lehoangthanh/ExpressJS-TypeScript.git"
+    "url": "https://github.com/lehoangthanh/ExpressJS-TypeScript.git"
   },
   "author": "",
   "license": "ISC",

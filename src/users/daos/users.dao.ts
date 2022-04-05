@@ -45,7 +45,6 @@ class UsersDao {
       'password',
       'firstName',
       'lastName',
-      'permissionLevel',
     ];
     for ( let field of allowedPatchFields) {
       if (field in user) {

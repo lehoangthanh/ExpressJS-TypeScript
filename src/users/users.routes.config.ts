@@ -16,6 +16,8 @@ export class UsersRoutesConfig extends CommonRoutesConfig {
         UsersMiddleware.validateSameEmailDoesntExist,
         UsersController.createUser
     );
+    this.app.route('/users/import')
+    .post(UsersController.importUser);
 
     this.app.param(`userId`, UsersMiddleware.extractUserId);
 

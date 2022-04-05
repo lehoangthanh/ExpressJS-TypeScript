@@ -47,6 +47,11 @@ class UsersController {
         log(await usersService.deleteById(req.body.id));
         res.status(204).send();
     }
+
+    async importUser(req: express.Request, res: express.Response) {
+        log(await usersService.importUser());
+        res.status(204).send();
+    }
 }
 
 export default new UsersController();

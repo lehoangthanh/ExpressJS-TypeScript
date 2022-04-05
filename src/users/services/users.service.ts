@@ -1,8 +1,12 @@
+// we import the argon2 library for password hashing
+import argon2 from 'argon2';
+
 import UsersDao from '../daos/users.dao';
 import { CRUD } from '../../common/interfaces/crud.interface';
 import { CreateUserDto } from '../dto/create.user.dto';
 import { PutUserDto } from '../dto/put.user.dto';
 import { PatchUserDto } from '../dto/patch.user.dto';
+import userTmp from '../database/userTmp';
 
 class UsersService implements CRUD {
   create(resource: CreateUserDto) {
@@ -31,6 +35,13 @@ class UsersService implements CRUD {
 
   async getUserByEmail(email: string) {
     return UsersDao.getUserByEmail(email);
+  }
+
+  importUser() {
+    userTmp.forEach(async(u) => {
+      u.password =  await argon2.hash(u.password);
+      this.create(u);
+    });
   }
 }
 export default new UsersService();

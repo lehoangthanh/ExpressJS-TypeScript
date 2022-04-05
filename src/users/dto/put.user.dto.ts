@@ -4,5 +4,8 @@ export interface PutUserDto {
   password: string;
   firstName: string;
   lastName: string;
-  permissionLevel: number;
+  address: string;
+  avatar?: string;
+  gender?: string;
+  age: number;
 }
